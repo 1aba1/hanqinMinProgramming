@@ -1,0 +1,4 @@
+<!--component/noMoreData/noMoreData.wxml-->
+<view class="wrapper">
+  <text>没有更多信息了~</text>
+</view>

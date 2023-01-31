@@ -1,0 +1,36 @@
+
+<view class="pageContainer">   <!-- 背景 -->
+    <image class="navBg" mode="widthFix" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/63c2a2195a7e3f0310ad12a8/63c2a27bae096200115a37ee/16737000362847380052.png"></image>
+</view>
+
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight+tarbarHeight-15}}px">  <!-- 主页面 -->
+  <block  wx:if="{{Pagechange==1}}" >   <!-- 导航页面 -->
+    <myTopBar>
+      <text>历史记录</text>
+    </myTopBar>
+
+    <scroll-view scroll-y="true"  style="height: {{pageHeight+tarbarHeight-15-38.5}}px" wx:if="{{1}}">  <!-- 收藏展示窗口 -->
+      <poetry></poetry>
+      <history bind:changePage="changePage"></history>
+      <creation></creation>
+      <view style="height: 1rpx;">
+      </view>
+    </scroll-view>
+  </block>
+ 
+  <block wx:if="{{Pagechange==2}}"> <!-- 历史文章页面 -->
+    <articleTopBar bind:changePage="changePage"></articleTopBar>
+    <scroll-view scroll-y="true" style="height: {{pageHeight+tarbarHeight-15-38.5}}px" >  
+      <article></article>
+    </scroll-view>
+  </block>
+
+</view>
+
+
+
+
+
+
+
+ 

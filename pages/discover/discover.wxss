@@ -1,0 +1,80 @@
+/* pages/discover/discover.wxss */
+.idiom{
+  backface-visibility:hidden;
+  transition: 4s ease-in-out;
+  animation: animated-border 6s linear infinite ;
+  position: absolute;
+  margin-left: 85rpx;
+  margin-top: 335rpx;
+  width: 142rpx;
+  height: 955rpx;
+  opacity: 1;
+  border-radius: 20rpx;
+  transition: 0.5s ease-in-out;
+  /* background: rgba(204, 204, 204, 0.8); */
+}
+.reverse image{
+  backface-visibility:hidden;
+  transition: 2s cubic-bezier(0.940, 0.055, 0.120, 0.950);
+  transform: rotateY(-360deg);
+}
+.idiom image
+{
+  width: 200%;
+}
+.flowerOrder image{
+  width: 110%;
+}
+.poetry image{
+  width: 200%;
+}
+
+
+
+.flowerOrder{
+  animation: animated-border2 6s linear infinite 0.75s;
+  position: absolute;
+  margin-left: 304rpx;
+  margin-top: 220rpx;
+  width: 142rpx;
+  height: 1184rpx;
+  border-radius: 20rpx;
+  /* background-color: antiquewhite; */
+}
+.poetry{
+  animation: animated-border 6s linear infinite 1s;
+  position: absolute;
+  margin-left: 523rpx;
+  margin-top: 335rpx;
+  width: 142rpx;
+  height: 955rpx;
+  opacity: 1;
+  border-radius: 20rpx;
+  /* background: rgba(204, 204, 204, 0.8); */
+}
+@keyframes animated-border {  /*动画效果*/
+  100%,0% {
+    transform:translate(0px,0px);
+    /* box-shadow: 0 0 0 0 rgba(255,255,255,0.4); */
+  }
+  25% {
+    transform:translate(0,-20px);
+    /* box-shadow: 0 0 0 20px rgba(255,255,255,0); */
+  }
+  75%{
+    transform:translate(0,20px);
+  }
+}
+@keyframes animated-border2 {  /*动画效果*/
+  100%,0% {
+    transform:translate(0px,0px);
+    /* box-shadow: 0 0 0 0 rgba(255,255,255,0.4); */
+  }
+  25% {
+    transform:translate(0,20px);
+    /* box-shadow: 0 0 0 20px rgba(255,255,255,0); */
+  }
+  75%{
+    transform:translate(0,-20px);
+  }
+}

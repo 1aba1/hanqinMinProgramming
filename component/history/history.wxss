@@ -1,0 +1,53 @@
+/* component/history/history.wxss */
+/* 历史卡片样式 */
+.card2{
+  margin:30rpx;
+  padding: 30rpx;
+  overflow: hidden;
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.02);
+}
+.headline2{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.headline2 .title{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.headline2 .title .text{
+  width: 400rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.headline2 .icon2 .image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.headline2 .icon2{
+  position: absolute;
+  margin-left: 520rpx;
+}
+.author2{
+  display: flex;
+  justify-content: center;
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(203, 173, 100, 1);
+  margin: 20rpx;
+}
+.text2{ 
+  text-indent:1em;
+  font-family: "古风";
+  font-size: 36rpx;
+  font-weight: 100;
+  line-height: 72rpx;
+  width: 570rpx;
+  color: rgb(0, 0, 0);
+}

@@ -1,0 +1,166 @@
+/* pages/myCreation/myCreation.wxss */
+/* pages/myCollect/myCollect.wxss */
+
+.search {   /*搜索图标  */
+  margin-left: 492.99rpx;
+  margin-top: 122.53rpx;
+}
+.search image{
+  width: 34.57rpx;
+  height: 34.95rpx;
+}
+.page{   /*主页面  */
+  width:690rpx ;
+  height: 1400rpx;
+  background-color:#F0EFF4;
+  margin-top: 180rpx;
+  margin-left: 30rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.topNavg{   /*导航栏  */
+  width: 690rpx;
+  height: 77rpx;
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+}
+.topNavg text{
+font-size: 36rpx;
+line-height:77rpx;
+font-weight: 400;
+color: rgba(22, 110, 105, 1);
+text-align: center;
+}
+.topNavg text:nth-child(1){
+  margin-left: 90rpx;
+}
+.topNavg text:nth-child(2){
+  margin-left: 144rpx;
+}
+.topNavg text:nth-child(3){
+  margin-left: 144rpx;
+}
+.topNavg text.active{
+  font-weight: 600;
+  color: rgba(203, 173, 100, 1);
+}
+
+
+/* 历史文章展示 */
+.history-page-headline{   /* 历史文章展示--首部 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%rpx;
+  height: 77rpx;
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-left:30rpx ;
+  padding-right:30rpx ;
+}
+.history-page-headline .icon2 image{
+  width: 50rpx;
+}
+.history-page-headline .title{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+
+
+
+/* 创作页面 */
+.whiteBG{
+  background-color: #fff;
+}
+.create-topNavg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77rpx;
+  border-radius: 8rpx 8rpx 0 0;
+  background: rgba(255, 255, 255, 1);
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px solid rgba(166, 166, 166, 1);      
+}
+.create-topNavg image{
+  width: 32rpx;
+}
+.create-topNavg text:nth-child(2){
+  font-size: 36rpx;
+  font-weight: 600;
+  color:rgba(203, 173, 100, 1)
+}
+.create-topNavg text:nth-child(3){
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #006CA6;
+}
+.create-title textarea,
+.create-content textarea
+{
+  margin-top: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 30rpx;
+  width: 630rpx;
+}
+.cutLine{ /*分割线*/
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  background: rgba(204, 204, 204, 1);
+  height: 1rpx;
+  width: 630rpx;
+}
+.uploadImgB{
+  margin-top: 90rpx;
+  margin-left: 30rpx;
+  display: flex;
+} 
+.uploadImgB image{
+  overflow: hidden;
+  margin-right: 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+/* 弹窗页面 */
+.popovar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 1900rpx;
+  position: absolute; 
+  top: 0;
+  z-index: 100; 
+  background-color:  rgba(0, 0, 0, 0.2);
+}
+.popovar .committed{
+  margin-top: 533rpx;
+  width: 300rpx;
+}
+.popovar .uncommitted{
+  margin-top: 533rpx;
+  width: 415rpx;
+}
+.popovar .inquiry{
+  margin-top: 533rpx;
+  width: 532rpx;
+}
+.popovar .option{
+  margin-top: 60rpx;
+  width: 532rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.popovar .option image{
+  width: 167rpx;
+}
+
+
+ 
+
+
+
+

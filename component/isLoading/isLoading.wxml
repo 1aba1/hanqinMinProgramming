@@ -1,0 +1,4 @@
+<!--component/noMoreData/noMoreData.wxml-->
+<view class="wrapper">
+  <text>正在加载~</text>
+</view>

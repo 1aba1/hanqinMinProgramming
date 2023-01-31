@@ -1,0 +1,19 @@
+<!--component/history/history.wxml-->
+<view class="card2">  <!-- 历史卡片 -->
+        <view class="headline2">
+          <view class="title">
+            <text class="text">{{history.title}}</text>
+          </view>
+          <view class="icon2">
+            <image class="image" src="/image/icon/nav-arrow.png" bindtap="changePage"  mode="widthFix" />
+          </view>
+        </view>
+        <view class="author2">
+          <text>{{history.author}}</text>
+        </view>
+        <view class="text2">
+          <text class="text">{{cutArticle.cutArticleContent(history.content)}}</text>
+        </view>
+</view>
+
+<wxs src="../../utils/cutArticleContent.wxs" module="cutArticle"/>

@@ -1,0 +1,16 @@
+/* pages/myCollect/myCollect.wxss */
+
+.page{   /*主页面  */
+  /* box-sizing: border-box; */
+  /* padding-bottom: 30rpx; */
+  width:690rpx ;
+  height: 1400rpx;
+  background-color:#F0EFF4;
+  margin-top: 180rpx;
+  margin-left: 30rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+
+

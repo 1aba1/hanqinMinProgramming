@@ -1,0 +1,10 @@
+function cutArticleContent(content) {   // 将文本剪裁为最大80个字符的文段
+  var result=content.substring(0,70);
+  result=result+"..."
+  return result;
+};
+
+//暴露的跟引用页面的一样可简写成一个
+module.exports = {
+  cutArticleContent:cutArticleContent
+}

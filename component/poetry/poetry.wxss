@@ -1,0 +1,70 @@
+/* component/poetry/poetry.wxss */
+
+.card{  /*诗歌卡片*/
+  overflow: hidden;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  width: 628rpx;
+  /* height: 603rpx; */
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.02);
+}
+.card .headline{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+.headline .icon{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30rpx;
+  width: 120rpx;
+  /* height: 85rpx; */
+  opacity: 1;
+}
+.icon .image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.card .author{
+ margin-left: 30rpx;
+ margin-top: 30rpx;
+font-size: 24rpx;
+font-weight: 400;
+line-height: 30rpx;
+color: rgba(203, 173, 100, 1);
+}
+.card .text{
+  text-indent: 1.5em;
+  font-family: "古风";
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 36rpx;
+  font-weight: 100;
+  line-height: 72rpx;
+  width: 570rpx;
+  color: rgb(0, 0, 0);
+}
+.card .cutLine{
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  background: rgba(204, 204, 204, 1);
+  height: 1rpx;
+  width: 570rpx;
+}
+.card .appreciation{
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom:30rpx ;
+  font-size: 30rpx;
+  font-weight: 300;
+  line-height: 41rpx;
+  width: 570rpx;
+  color: rgb(0, 0, 0);
+}

@@ -1,0 +1,222 @@
+/* pages/create/create.wxss */
+.navBg { /*背景图  */
+  width: 100%;
+  position: absolute; /* 使用 z-index 调整上下层级需要脱离文档流 */
+  top: 0;
+  z-index: -100; /* z-index 设低一点，让页面元素可以覆盖它 */
+}
+.search {   /*搜索图标  */
+  margin-left: 492.99rpx;
+  margin-top: 122.53rpx;
+}
+.search image{
+  width: 34.57rpx;
+  height: 34.95rpx;
+}
+.page{   /*主页面  */
+  width:690rpx ;
+  /* height: 1300rpx; */
+  background-color:#F0EFF4;
+  margin-top: 177rpx;
+  margin-left: 30rpx;
+  border-radius: 8rpx 8rpx 0 0;
+  overflow: hidden;
+}
+
+/* 用户创作内容展示 */
+.topNavg{   /*导航栏  */
+  display: flex;
+  align-items: center;
+  width: 690rpx;
+  height: 77rpx;
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+}
+.topNavg text{
+  margin-left: 292rpx;
+  font-size: 36rpx;
+  /* line-height:77rpx; */
+  font-weight: 600;
+  color: rgba(22, 110, 105, 1);
+  /* text-align: center; */
+}
+.topNavg image{
+  /* margin-top: 20rpx; */
+  margin-left: 257rpx;
+  width: 36.71rpx;
+}
+
+/* 创作卡片 */
+.cardCreate{
+  margin:30rpx;
+  padding: 30rpx;
+  overflow: hidden;
+  /* height: 603rpx; */
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.02);
+}
+.userBar{
+  display: flex;
+}
+.userBar .userImg{
+  overflow: hidden;
+  border-radius: 8rpx;
+  background-color: aqua;
+  width: 70rpx;
+  height: 70rpx;
+}
+.userBar .userImg image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.userMessage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+.userMessage text:nth-child(1){
+  font-size: 28rpx;
+  font-weight: 400;
+}
+.userMessage text:nth-child(2){
+  font-size: 25rpx;
+  font-weight: 400;
+  color: rgba(122, 134, 154, 1);
+}
+.userArticle{
+  margin-top: 10rpx;
+  margin-left:100rpx ;
+}
+.userArticle text{
+  font-family: "古风";
+  font-size: 36rpx;
+  font-weight: 100;
+  line-height: 72rpx;
+  width: 570rpx;
+  color: rgb(0, 0, 0);
+}
+.createPicture{    /*用户图片*/
+  width: 470rpx;
+  margin-top: 20rpx;
+  margin-left: 100rpx;
+  /* border-radius: 15rpx,15rpx, 20rpx, 20rpx; */
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.createPicture image{
+  display: block;
+  width: 470rpx;
+}
+.commute{   /*互动按钮*/
+  display: flex;
+  width: 410rpx;
+  justify-content: space-between;
+  margin-left: 130rpx;
+  margin-top: 20rpx;
+}
+.commute .like{
+  display: flex;
+}
+.commute .like image,
+.commute .collect image
+{
+  width: 40rpx;
+  margin-right: 10rpx;
+}
+.commute .collect{
+  display: flex;
+}
+
+/* 创作页面 */
+.whiteBG{
+  background-color: #fff;
+}
+.create-topNavg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77rpx;
+  border-radius:8rpx 8rpx 0rpx 0rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px solid rgba(166, 166, 166, 1);      
+}
+.create-topNavg image{
+  width: 32rpx;
+}
+.create-topNavg text:nth-child(2){
+  font-size: 36rpx;
+  font-weight: 600;
+  color:rgba(203, 173, 100, 1)
+}
+.create-topNavg text:nth-child(3){
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #006CA6;
+}
+.create-title textarea,
+.create-content textarea
+{
+  margin-top: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 30rpx;
+  width: 630rpx;
+}
+.cutLine{ /*分割线*/
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  background: rgba(204, 204, 204, 1);
+  height: 1rpx;
+  width: 630rpx;
+}
+.uploadImgB{
+  margin-top: 90rpx;
+  margin-left: 30rpx;
+  display: flex;
+} 
+.uploadImgB image{
+  margin-right: 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+/* 弹窗页面 */
+.popovar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 1900rpx;
+  position: absolute; 
+  top: 0;
+  z-index: 100; 
+  background-color:  rgba(0, 0, 0, 0.2);
+}
+.popovar .committed{
+  margin-top: 533rpx;
+  width: 300rpx;
+}
+.popovar .uncommitted{
+  margin-top: 533rpx;
+  width: 415rpx;
+}
+.popovar .inquiry{
+  margin-top: 533rpx;
+  width: 532rpx;
+}
+.popovar .option{
+  margin-top: 60rpx;
+  width: 532rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.popovar .option image{
+  width: 167rpx;
+}
+
+
+
+

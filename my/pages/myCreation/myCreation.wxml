@@ -1,0 +1,78 @@
+<!--pages/myCreation/myCreation.wxml-->
+<view class="pageContainer">   <!-- 背景 -->
+    <image class="navBg" mode="widthFix" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/63c2a2195a7e3f0310ad12a8/63c2a27bae096200115a37ee/16737000362847380052.png"></image>
+</view>
+
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight+tarbarHeight-15}}px">  <!-- 主页面 -->
+  <block  wx:if="{{Pagechange==1}}">   <!-- 导航页面 -->
+    <myTopBar bind:searchCreation="searchCreation" bind:stopSearch="stopSearch">
+      <text>我的创作</text>
+    </myTopBar>
+
+    <scroll-view scroll-y="true" style="height: {{pageHeight}}px"
+        refresher-enabled="{{true}}"
+        refresher-triggered="{{isLoading}}" 
+        bindrefresherrefresh="onRefresh"
+        bindscrolltolower="reLoad"  
+      >  
+        <changeCreation bind:changePage="changePage"  bind:deleteCreaion="deleCreationModule" wx:for="{{creations}}" wx:key="litId" creation="{{item}}">
+        </changeCreation>
+        <isLoading wx:if="{{isUpLoading}}"></isLoading>
+        <noMoreData wx:if="{{isTotal}}"></noMoreData>
+    </scroll-view>
+  </block>
+ 
+  <block wx:if="{{Pagechange==2}}" >   <!-- 用户进行创作页 -->
+      <view class="create-topNavg">    <!-- 导航栏 -->
+        <image   bindtap="remindUnsave"  data-Pagechange="{{1}}" src="https://img.js.design/assets/img/63c9125fb5de2a3246ecc60e.png#ddfdf949d3114b91ff0e658295044f2c" mode="widthFix"/>
+        <text >创作</text>
+        <text bindtap="submitCreate">提交</text>
+      </view>
+      <scroll-view scroll-y="true" style="height:1287rpx;">
+        <view class="create-title">
+          <textarea  
+              auto-height 
+              placeholder="标题"
+              auto-focus="{{true}}"
+              maxlength="{{1000}}"
+              bindinput="bindTitle"
+              value="{{createTitle}}"
+          />
+        </view>
+        <view class="cutLine" ></view>
+        <view class="create-content">
+          <textarea 
+              auto-height
+              placeholder="内容"
+              bindinput="bindText"
+              maxlength="{{1000}}"
+              value="{{createContent}}"
+          />
+        </view>
+        <view class="uploadImgB" >
+          <image class="image"  wx:if="{{pictureUrl&&!srcI}}" src="data:image/png;base64,{{pictureUrl}}" mode="aspectFill" />
+          <image wx:if="{{srcI}}" src="{{srcI}}" alt="" mode="aspectFill"/>
+          <image bindtap="uploadImg"  src="https://img.js.design/assets/img/63c940e1b5de2a3246f07acd.png#e4485d25bbad20e2cc975c4039e67e49" alt=""/>
+        </view>
+      </scroll-view>
+  </block>
+</view>
+
+<view class="popovar" wx:if="{{showCommitPopovar}}">   <!-- 提交弹窗 -->
+  <image class="committed" wx:if="{{(createTitle||createContent)}}" src="https://img.js.design/assets/img/63ca12a6a3a6fc089d2a9cba.png#7bdcd7ad9d25595296579a14de450ef4" mode="widthFix"/>
+  <image class="uncommitted" wx:if="{{!(createTitle||createContent)}}" src="https://img.js.design/assets/img/63ca41fd427ae4d70cf17379.png#f04598470dfc5a9fde540e5a23c2602c" mode="widthFix"/>
+</view>
+<view class="popovar"  wx:if="{{showExitPopovar}}" >    <!-- 退出弹窗 -->
+  <image class="inquiry" src="https://img.js.design/assets/img/63ca18f2b5de2a3246f82c06.png#53e07e3c3b8b38564af8abed533e4c8a" mode="widthFix"/>
+  <view class="option">
+    <image bindtap="closeRemindUnsave"  src="https://img.js.design/assets/img/63ca18f2427ae4d70cee5018.png#ee4d02f0956e66cadf87ad7855aa0fe7" mode="widthFix"/>
+    <image bindtap="resetPagechange" data-pagechange="1" src="https://img.js.design/assets/img/63ca18f2a29aea50d96eac9a.png#b325fe9cbe55468404995ad23e38ac1f" mode="widthFix"/>
+  </view>
+</view> 
+
+
+
+
+
+
+ 

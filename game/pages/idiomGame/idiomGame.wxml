@@ -1,0 +1,37 @@
+<!--pages/idiomGame/idiomGame.wxml-->
+<view >   <!-- 背景 -->
+    <image class="navBg" mode="aspectFill" src="https://img.js.design/assets/img/63c4d81c9aa2e775760de788.png#20beac3283eedb0f67416fb610a4a5ea"></image>
+</view>
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight}}px">
+  <view class="history-page-headline">
+        <view class="icon2">
+              <image src="https://img.js.design/assets/img/63ccd640a3a6fc089d3d15ab.png#09a3de200de4034b99cd5873406e0f43" bindtap="back"   mode="widthFix" />
+        </view>
+        <view class="title">
+          <text>成语接龙</text>
+        </view>
+  </view>
+  <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px">  
+      <view class="card2">  
+      <block wx:for="{{userAnswer}}" wx:key="index">
+        <view class="user" >
+          <view class="wrapper">
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <view class="robot"  >
+          <view class="wrapper2">
+            <text>{{robotAnswer[index]}}</text>
+          </view>
+        </view>
+      </block>
+      </view>
+</scroll-view>
+</view>
+<form class="inputForm" bindsubmit="submitContent">  <!-- 输入框 -->
+  <input type="text" name="content" value="{{blankContent}}"/>
+  <button id="sumButton"  form-type="submit"  >发送</button>
+</form> 
+<view class="popover" hidden="{{popIshidden}}">
+  <image src="https://img.js.design/assets/img/63cd52da0b5fab992f7b4888.png#78cf5fb3d0876d51a64bae239d8a4925" mode="widthFix"/>
+</view>

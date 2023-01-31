@@ -1,0 +1,7 @@
+function splitPhone(str){
+  return str
+}
+
+module.exports={
+  splitPhone:splitPhone
+}

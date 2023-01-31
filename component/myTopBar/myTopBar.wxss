@@ -1,0 +1,65 @@
+/* component/myTopBar/myTopBar.wxss */
+.history-page-headline{   /* 历史--首部 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%rpx;
+  height: 77rpx; 
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-left:30rpx ;
+  padding-right:30rpx ;
+}
+.page-headline-broaden{
+  height: 90rpx;
+}
+.history-page-headline .icon2 .image{
+  width: 50rpx;
+  display: block;
+}
+.history-page-headline .title{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.search {   /*搜索框  */
+  display: flex;
+  align-items: center;
+  height: 64rpx;
+  opacity: 1;
+  border-radius: 31.5rpx;
+  background: rgba(253, 253, 253, 0);
+  transition:  0.3s ease ;
+}
+.searching{
+  width: 630rpx;
+  background: rgba(240, 239, 244, 1);
+}
+.search .image:nth-child(1),
+.search .image:nth-child(3),
+.search .input
+{
+  transition:  0.3s ease ;
+  display: none;
+}
+.searching .image:nth-child(1),
+.searching .image:nth-child(3),
+.searching .input
+{
+  display: block;
+}
+.search .image:nth-child(1){
+  margin-left: 30rpx;
+}
+.search .image:nth-child(3),
+.search .image:nth-child(4){
+  margin-left: 30rpx;
+}
+.search .input{
+  margin-left: 30rpx;
+  width: 390rpx;
+}
+.search .image{
+  width: 34.57rpx;
+  height: 34.95rpx;
+}
+

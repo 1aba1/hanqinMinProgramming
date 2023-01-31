@@ -1,0 +1,35 @@
+<!--pages/idiomGame/idiomGame.wxml-->
+<view >   <!-- 背景 -->
+    <image class="navBg" mode="aspectFill" src="https://img.js.design/assets/img/63c4d91922b7265babec6926.png#35dc969e775c4c6e9552f3189822061c"></image>
+</view>
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight}}px">
+  <view class="history-page-headline">
+        <view class="icon2">
+              <image src="https://img.js.design/assets/img/63ccd640a3a6fc089d3d15ab.png#09a3de200de4034b99cd5873406e0f43" bindtap="back"   mode="widthFix" />
+        </view>
+        <view class="title">
+          <text>诗词接龙</text>
+        </view>
+  </view>
+  <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px">  <!-- 故事窗口 -->
+      <view class="card2" >  
+        <block wx:for="{{userAnswer}}" wx:key="index">
+        <view class="user" >
+          <view class="wrapper">
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <view class="robot"  >
+          <view class="wrapper2">
+            <text>{{robotAnswer[index].poetry}}</text>
+              <text>{{robotAnswer[index].name}}</text>
+          </view>
+        </view>
+        </block>
+      </view>
+</scroll-view>
+</view>
+<form class="inputForm" bindsubmit="submitContent">  <!-- 输入框 -->
+  <input type="text" name="content" value="{{blankContent}}"/>
+  <button id="sumButton"  form-type="submit"  >发送</button>
+</form> 

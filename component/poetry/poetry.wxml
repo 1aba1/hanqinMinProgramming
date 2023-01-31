@@ -1,0 +1,23 @@
+<!--component/poetry/poetry.wxml-->
+<view class="card">  <!-- 诗卡片 -->
+      <view class="headline">
+        <text>{{poetry.title}}</text>
+        <view class="icon">
+          <image class="image" src="/image/icon/appre.png" bindtap="changeAppre" mode="widthFix" hidden="{{isAppreFlag}}"/>
+          <image class="image" src="/image/icon/appre-active.png" bindtap="changeAppre" mode="widthFix" hidden="{{!isAppreFlag}}"/>
+          <image class="image" src="https://img.js.design/assets/img/63ce426d0b5fab992f7ff25b.png#6a7cb8cb5090cb9e2d0386f56e61e840" bindtap="changeCollect" mode="widthFix" hidden="{{isCollectFlag}}"  />
+          <image class="image" src="/image/icon/collect-active.png" bindtap="changeCollect" mode="widthFix"  hidden="{{!isCollectFlag}}"/>
+        </view>
+      </view>
+      <view class="author">
+        <text>{{poetry.author}}</text>
+      </view>
+      <view class="text">
+        <text>{{poetry.content}}</text>
+      </view>
+      <view class="cutLine" hidden="{{!isAppreFlag}}">
+      </view>
+      <view class="appreciation" hidden="{{!isAppreFlag}}">
+        <text>{{poetry.appreciation}}</text>
+      </view>
+</view>

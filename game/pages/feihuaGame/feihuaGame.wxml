@@ -1,0 +1,37 @@
+
+<view >   <!-- 背景 -->
+    <image class="navBg" mode="aspectFill" src="https://img.js.design/assets/img/63bf7cfc495695dde633ad03.png#b6b9782a21dd262211255e87df3e975b"></image>
+    <image class="navBg" mode="aspectFill" src="https://img.js.design/assets/img/63c4db50609e7f5ea1e38099.png#b0e22a63ca9a8df0f91cfafd46ac9de8"></image>
+</view>
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight}}px">
+  <view class="history-page-headline">
+        <view class="icon2">
+              <image src="https://img.js.design/assets/img/63ccd6340b5fab992f7794b6.png#c6af7f6fb4191dc1a31d6042a3e55d8a" bindtap="back"   mode="widthFix" />
+        </view>
+        <view class="title">
+          <text>飞花令：雪</text>
+        </view>
+  </view>
+  <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px" >  <!-- 故事窗口 -->
+      <view class="card2">
+        <block wx:for="{{userAnswer}}" wx:key="index">  
+          <view class="user">
+            <view class="wrapper">
+              <text>{{item}}</text>
+            </view>
+          </view>
+          <view class="robot">
+            <view class="wrapper2">
+              <text>{{robotAnswer[index].poetry}}</text>
+              <text>{{robotAnswer[index].name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+</scroll-view>
+</view>
+<form class="inputForm" bindsubmit="submitContent">  <!-- 输入框 -->
+  <input type="text" name="content" value="{{blankContent}}"/>
+  <button id="sumButton"  form-type="submit"  >发送</button>
+</form> 
+ 

@@ -1,0 +1,13 @@
+<!--component/articleTopBar/articleTopBar.wxml-->
+<view class="history-page-headline">
+      <view class="icon2">
+            <image class="image" src="/image/icon/page-arrow-back.png" bindtap="changePage"   mode="widthFix" hidden="{{isAppreFlag}}"/>
+      </view>
+      <view class="title">
+        <text> {{title}}</text>
+      </view>
+      <view class="icon2">
+        <image class="image" src="/image/icon/collect.png" bindtap="changeCollect"   mode="widthFix" wx:if="{{!isCollectFlag}}"/>
+        <image class="image" src="/image/icon/collect-active.png" bindtap="changeCollect"   mode="widthFix" wx:if="{{isCollectFlag}}"/>
+      </view>
+</view>

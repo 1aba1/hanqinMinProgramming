@@ -1,0 +1,39 @@
+<!--component/creation/creation.wxml-->
+<view class="cardCreate">  <!-- 创作卡片 -->
+          <view class="userBar">
+            <view class="userImg">
+              <image  class=".image"  src="data:image/png;base64,{{avatarUrl}}" mode="aspectFill"/>
+            </view>
+            <view class="userMessage">
+              <text class="text">{{creation.nickName}}</text>
+              <text class="text">{{timeModule.calculateTime(creation.createTime)}}</text>
+            </view>
+          </view>
+          <view class="userArticle">
+            <view>
+              <text class="text">{{creation.title}}</text>
+            </view>
+            <text class="text">{{creation.content}}
+            </text>
+          </view>
+          <view class="createPicture" wx:if="{{pictureUrl}}">
+            <image class="image"   src="data:image/png;base64,{{pictureUrl}}" mode="widthFix"/>
+          </view>
+          <view class="commute">
+            <view class="like">
+              <image class="image" src="/image/icon/like.png" bindtap="changeLike" hidden="{{isLike}}" mode="widthFix"/>
+              <image class="image" src="/image/icon/like-active.png" bindtap="changeLike" hidden="{{!isLike}}"  mode="widthFix"/>
+              <text>{{likeNumber}}</text>  
+            </view>
+            <view class="collect">
+              <image class="image" src="/image/icon/collect.png" bindtap="changeCollect" hidden="{{isCollectFlag}}"  mode="widthFix"/>
+              <image class="image" src="/image/icon/collect-active.png"bindtap="changeCollect" hidden="{{!isCollectFlag}}"   mode="widthFix"/>
+              <text>{{collectNumber}}</text>  
+            </view>
+            
+          </view>
+        
+</view>
+
+
+<wxs src="../../utils/calculateTime.wxs" module="timeModule"/>

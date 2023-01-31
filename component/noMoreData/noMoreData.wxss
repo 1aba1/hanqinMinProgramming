@@ -1,0 +1,9 @@
+/* component/noMoreData/noMoreData.wxss */
+.wrapper{
+  height: 60rpx;
+  width: 100%;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

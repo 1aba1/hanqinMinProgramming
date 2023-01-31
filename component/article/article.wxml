@@ -1,0 +1,14 @@
+<!--component/article/article.wxml-->
+<!-- <scroll-view scroll-y="true"  style="height: {{pageHeight+tarbarHeight-15-38.5}}px"  >  
+</scroll-view> -->
+<view class="card2">  <!-- 历史文章--与历史卡片同样式 -->
+        <view class="author2">
+          <text>{{author}}</text>
+        </view>
+        <view class="text2">
+         <text class="text" user-select>{{content}}</text>
+        </view>
+</view>
+<view style="height:1rpx;">
+  
+</view>

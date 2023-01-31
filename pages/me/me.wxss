@@ -1,0 +1,115 @@
+/* pages/me/me.wxss */
+.page{   /*主页面  */
+  box-sizing: border-box;
+  position: relative;
+  width:690rpx ;
+  /* height: 1300rpx; */
+  background-color:#ffffff;
+  /* margin-top: 177rpx; */
+  margin-left: 30rpx;
+  border-radius: 8rpx 8rpx 0rpx 0rpx;
+}
+
+.userIcon{
+  overflow: hidden;
+  position:absolute;
+  z-index: 100;
+  top:-100rpx;
+  margin-left: 176rpx;
+  width: 339rpx;
+  height: 339rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 300rpx;
+}
+.userIcon image{
+  border-radius: 300rpx;
+  width: 100%;
+  height: 100%;
+}
+.userName{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  /* margin-left: 30rpx; */
+margin-top: 264rpx;
+width: 690rpx;
+/* height: 24rpx; */
+font-size: 36rpx;
+font-weight: 600;
+letter-spacing: 0rpx;
+line-height: 24rpx;
+color: rgba(26, 5, 29, 1);
+}
+.userName  .inputUserName{
+  display: flex;
+  align-items: center;
+  transition:  6s ease ;
+  /* opacity: 0; */
+}
+.userName  .inputUserName input{
+  background-color: #F0EFF4;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-right: 30rpx;
+  width: 350rpx;
+  transition:  6s ease ;
+}
+.userName .inputUserNameActive{
+  opacity: 1;
+}
+.center{
+  margin-left: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  position:absolute;
+  margin-top:364rpx;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.04);
+}
+.cutLine{
+  /* margin-left: 30rpx;
+  margin-top: 30rpx; */
+  background: rgba(204, 204, 204, 0.3);
+  height: 1rpx;
+  /* width: 570rpx; */
+}
+.card{
+  box-sizing: border-box;
+  display: flex;
+  /* padding: 30rpx; */
+  align-items: center;
+  /* margin-left: 30rpx; */
+  width: 570rpx;
+  height:180rpx;
+  opacity: 1;
+  background: rgb(255, 255, 255);
+}
+.card image{
+  width: 55rpx;
+  margin-right: 30rpx
+}
+.card text{
+  font-size: 36rpx;
+  font-weight: 400;
+}
+.popovar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 1900rpx;
+  position: absolute; 
+  top: 0;
+  z-index: 100; 
+  /* background-color:  rgba(0, 0, 0, 0.2); */
+}
+.popovar .textWrapper{
+  border: 5rpx #FE9B00 groove ;
+  border-radius: 12px;
+  background-color: #ffffff;
+  font-family: "古风";
+  margin-top: 533rpx;
+  width: 300rpx;
+  font-size: 40rpx;
+  font-weight: 400;
+}

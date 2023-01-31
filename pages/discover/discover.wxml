@@ -1,0 +1,20 @@
+<!--pages/discover/discover.wxml-->
+<!-- 背景 -->
+<image class="navBg" mode="widthFix" src="/image/background/craneBackground.png"></image>
+
+<view  bindtap="intoGame" data-gameid="{{1}}" class="idiom {{gameId==1?'reverse':''}} " 
+  style="margin-top: {{(s+n)*2}}px;"
+ >
+  <image src="https://img.js.design/assets/img/63c64374f85080943f5d4bff.png#b71476280000ee3db7968dabe433aea4" mode="widthFix"/>
+</view>
+
+<view   bindtap="intoGame" data-gameid="{{2}}" class="flowerOrder {{gameId==2?'reverse':''}} "
+style="margin-top: {{s+n}}px;"
+>  
+  <image src="https://img.js.design/assets/img/63c64379002ad0e3102f3e12.png#81a7684985f58470fe21610e5b14df0d" mode="widthFix"/>
+</view>
+
+<view  bindtap="intoGame" data-gameid="{{3}}" class="poetry {{gameId==3?'reverse':''}}"
+style="margin-top: {{(s+n)*2}}px;">
+  <image src="https://img.js.design/assets/img/63c6437cf85080943f5d4e36.png#d9e29fc1f872628ed2c63e61cb3d2212" mode="widthFix"/>
+</view>

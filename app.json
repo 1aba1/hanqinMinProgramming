@@ -1,0 +1,71 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/create/create",
+    "pages/discover/discover",
+    "pages/me/me"
+  ],
+  "subPackages": [
+    {
+      "root":"game",
+      "pages": [
+        "pages/idiomGame/idiomGame",
+        "pages/feihuaGame/feihuaGame",
+        "pages/poetryGame/poetryGame"
+      ]
+    },
+    {
+      "root":"my",
+      "pages": [
+        "pages/myCollect/myCollect",
+        "pages/myCreation/myCreation",
+        "pages/myHistory/myHistory"
+      ]
+    }
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom" 
+  },
+  "tabBar": {
+    "list":[
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/image/icon/home.png",
+      "selectedIconPath": "/image/icon/home-active.png"
+    }, {
+      "pagePath": "pages/create/create",
+      "text": "创作",
+      "iconPath": "/image/icon/create.png",
+      "selectedIconPath": "/image/icon/create-active.png"
+      },{
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "/image/icon/discover.png",
+        "selectedIconPath": "/image/icon/discover-active.png"
+      },{
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/image/icon/my.png",
+        "selectedIconPath": "/image/icon/my-active.png"
+      }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "poetry":"/component/poetry/poetry",
+    "history":"/component/history/history",
+    "creation":"/component/creation/creation",
+    "article":"/component/article/article",
+    "myTopBar":"/component/myTopBar/myTopBar",
+    "articleTopBar":"/component/articleTopBar/articleTopBar",
+    "noMoreData":"/component/noMoreData/noMoreData",
+    "changeCreation":"/component/changeCreation/changeCreation",
+    "isLoading":"/component/isLoading/isLoading"
+  }
+}

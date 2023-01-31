@@ -1,0 +1,77 @@
+<!--pages/home/home.wxml-->
+<!-- 背景 -->
+<image class="navBg" mode="widthFix" src="/image/background/craneBackground.png"></image>
+<block  wx:if="{{Pagechange==1}}">  <!-- 搜索 -->
+  <view class="searchWrapper" style="margin-top:{{s}}px;height: {{n}}px;">  
+    <view class="search {{searching==true?'searching':''}}" style="height: {{h-2}}px;">    
+      <image bindtap="hideSearch" src="/image/icon/arrow-back.png" mode="widthFix"/>
+      <input bindinput="inputSearch" type="text" value="{{searchContent}}"   type="text"/>
+      <image  bindtap="clearSearchContent" src="/image/icon/cancel.png" mode="widthFix"/>
+      <image bindtap="showSearch" wx:if="{{!searching}}" src="/image/icon/search.png" mode="widthFix"/>
+      <image bindtap="startSearch" wx:if="{{searching}}" src="/image/icon/search.png" mode="widthFix"/>
+    </view>
+  </view>
+  
+</block>
+
+
+<view class="page {{Pagechange==2?'pagedown':''}}" style="margin-top:{{marginTop}}px;height: {{pageHeight}}px" >  <!-- 主页面 -->
+  <block  wx:if="{{Pagechange==1}}">   <!-- 导航页面 -->
+    <view class="topNavg">    <!-- 导航 -->
+    <text class="{{barChoice==1?'active':''}}" bindtap="changeBer" data-bar="{{1}}">诗词</text>
+    <text class="{{barChoice==2?'active':''}}" bindtap="changeBer" data-bar="{{2}}">历史</text>
+    <text class="{{barChoice==3?'active':''}}" bindtap="changeBer" data-bar="{{3}}">故事</text>
+    </view>
+
+    <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px"  wx:if="{{barChoice==1}}"
+        refresher-enabled="{{true}}"
+        refresher-triggered="{{isLoading}}" 
+        bindrefresherrefresh="refreshPoetry"
+        bindscrolltolower="getMorePoetry"  
+    >  <!-- 诗歌窗口 -->
+      <poetry wx:for="{{poetrys}}" wx:key="artId" poetry="{{item}}"></poetry>
+      <isLoading wx:if="{{isUpLoading}}"></isLoading>
+      <noMoreData wx:if="{{poetrysIsTotal}}"></noMoreData>
+    </scroll-view>
+    
+    <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px" wx:if="{{barChoice==2}}"
+        refresher-enabled="{{true}}"
+        refresher-triggered="{{isLoading}}" 
+        bindrefresherrefresh="refreshHistory"
+        bindscrolltolower="getMoreHistory" 
+    >  
+        <!-- 历史窗口 -->
+     <history bind:changePage="changePage"wx:for="{{historys}}" wx:key="artId" history="{{item}}" ></history>
+      <isLoading wx:if="{{isUpLoading}}"></isLoading>
+      <noMoreData wx:if="{{historysIsTotal}}"></noMoreData>
+    </scroll-view>
+
+    <scroll-view scroll-y="true" style="height: {{pageHeight-38.5}}px" wx:if="{{barChoice==3}}"
+        refresher-enabled="{{true}}"
+        refresher-triggered="{{isLoading}}" 
+        bindrefresherrefresh="refreshStory"
+        bindscrolltolower="getMoreStory" 
+    >  <!-- 故事窗口 -->
+    <history bind:changePage="changePage"wx:for="{{storys}}" wx:key="artId" history="{{item}}" ></history>
+      <isLoading wx:if="{{isUpLoading}}"></isLoading>
+      <noMoreData wx:if="{{storysIsTotal}}"></noMoreData>
+    </scroll-view>
+  </block>
+ 
+  <block wx:if="{{Pagechange==2}}" > <!-- 历史文章页面 -->
+    <articleTopBar bind:changePage="changePage" title="{{article.title}}" 
+    artId="{{article.artId}}" ></articleTopBar>
+    <scroll-view scroll-y="true" style="height: {{pageHeight-32}}px" >  
+      <article content="{{article.content}}" author="{{article.author}}" ></article>
+    </scroll-view>
+  </block>
+
+</view>
+
+
+
+
+
+
+
+ 

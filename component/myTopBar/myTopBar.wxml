@@ -1,0 +1,17 @@
+<!--component/myTopBar/myTopBar.wxml-->
+<view class="history-page-headline {{searching==true?'page-headline-broaden':''}}">   <!-- 首部导航 -->
+      <view class="icon2" bindtap="backToMe" wx:if="{{searching==false}}">
+            <image class="image" src="/image/icon/page-arrow-back.png" data-Pagechange="{{1}}"  mode="widthFix" hidden="{{isAppreFlag}}"/>
+      </view>
+      <view class="title"  wx:if="{{searching==false}}">
+        <slot></slot>
+      </view>
+      <view class="search {{searching==true?'searching':''}}">    <!-- 搜索 -->
+        <image class="image" bindtap="hideSearch" src="/image/icon/arrow-back.png" mode="widthFix"/>
+        <input class="input" bindinput="inputSearch" type="text" value="{{searchContent}}"  placeholder="输入搜索内容" />
+        <image class="image" bindtap="clearSearchContent"  src="/image/icon/cancel.png" mode="widthFix"/>
+        <image class="image" bindtap="showSearch" wx:if="{{!searching}}" src="/image/icon/search.png" mode="widthFix"/>
+        <image class="image" bindtap="startSearch" wx:if="{{searching}}" src="/image/icon/search.png" mode="widthFix"/>
+      </view>
+</view>
+

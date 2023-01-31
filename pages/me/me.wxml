@@ -1,0 +1,43 @@
+<!--pages/me/me.wxml-->
+<!-- 背景 -->
+<image class="navBg" mode="widthFix" src="/image/background/craneBackground.png"></image>
+
+<view class="page" style="margin-top: {{s+n}}px;height: {{pageHeight}}px" >  <!-- 主页面 -->
+ <view class="userIcon" bindtap="uploadImg" >
+ <image   src="data:image/png;base64,{{avatarUrl}}" mode="aspectFill"/>
+ </view>
+ <view class="userName">
+  <text hidden="{{changeUserName}}" bindtap="inputUserName" >{{username}}</text>
+  <view   wx:if="{{changeUserName}}" class="inputUserName "  >
+    <input auto-focus="true" type="text"  bindinput="bindUserName" bindblur="stopInput" placeholder="在此设置用户姓名" />
+    <button  size="mini" type="primary" bindtap="sendUserName">提交</button>
+  </view>
+ </view>
+
+ <view class="center">
+    <view class="card card1" bindtap="changePage" data-pageCategory="1" >
+      <image src="/image/icon/collect-active.png" mode="widthFix"/>
+      <text>我的收藏</text>
+    </view>
+    <view class="cutLine" ></view>
+    <view class="card card2"  bindtap="changePage" data-pageCategory="2">
+      <image src="/image/icon/create-active.png" mode="widthFix"/>
+      <text>我的创作</text>
+    </view>
+    <view class="cutLine" ></view>
+    <view class="card card3"  bindtap="changePage" data-pageCategory="3">
+      <image src="/image/icon/history.png" mode="widthFix"/>
+      <text>历史记录</text>
+    </view>
+ </view>
+</view>
+
+
+
+
+<view class="popovar" wx:if="{{showCommitPopovar}}">   <!-- 提交弹窗 -->
+ <view class="textWrapper" >
+   <text>头像修改成功</text>
+   <text>昵称修改成功</text>
+ </view>
+</view>

@@ -1,0 +1,20 @@
+/* component/articleTopBar/articleTopBar.wxss */
+.history-page-headline{   /* 历史文章展示--首部 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%rpx;
+  height: 77rpx;
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-left:30rpx ;
+  padding-right:30rpx ;
+}
+.history-page-headline .icon2 .image{
+  display:block;
+  width: 50rpx;
+}
+.history-page-headline .title{
+  font-size: 36rpx;
+  font-weight: 600;
+}
